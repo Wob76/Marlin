@@ -132,11 +132,11 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "CE3-Pro"
+#define CUSTOM_MACHINE_NAME "CE3 Pro+"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "cede2a2f-41a2-4748-9b12-c55c62f367ff"
 
 // @section extruder
 
