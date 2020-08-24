@@ -1003,7 +1003,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {-44,-5, 0 } // *WOB* Creality Mount {D -44,-5, 0 }
+#define NOZZLE_TO_PROBE_OFFSET {-35.8,-2.5, 0 } // *WOB* Satsana Mount {D -44,-5, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
