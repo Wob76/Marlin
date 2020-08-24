@@ -2046,11 +2046,11 @@
 #define ADVANCED_PAUSE_FEATURE // *WOB* (E)
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define PAUSE_PARK_RETRACT_FEEDRATE         45  // (mm/s) Initial retract feedrate. *WOB* (60)
-  #define PAUSE_PARK_RETRACT_LENGTH            4  // (mm) Initial retract.
+  #define PAUSE_PARK_RETRACT_LENGTH           25  // (mm) Initial retract.
                                                   // This short retract is done immediately, before parking the nozzle.
   #define FILAMENT_CHANGE_UNLOAD_FEEDRATE     30  // (mm/s) Unload filament feedrate. This can be pretty fast. *WOB* (10)
   #define FILAMENT_CHANGE_UNLOAD_ACCEL        25  // (mm/s^2) Lower acceleration may allow a faster feedrate.
-  #define FILAMENT_CHANGE_UNLOAD_LENGTH      426  // (mm) The length of filament for a complete unload. *WOB* (100)
+  #define FILAMENT_CHANGE_UNLOAD_LENGTH      405  // (mm) The length of filament for a complete unload. *WOB* (100)
                                                   //   For Bowden, the full length of the tube and nozzle.
                                                   //   For direct drive, the full length of the nozzle.
                                                   //   Set to 0 for manual unloading.
