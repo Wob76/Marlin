@@ -2059,7 +2059,7 @@
                                                   // 0 to disable start loading and skip to fast load only
   #define FILAMENT_CHANGE_FAST_LOAD_FEEDRATE  30  // (mm/s) Load filament feedrate. This can be pretty fast. *WOB* (6)
   #define FILAMENT_CHANGE_FAST_LOAD_ACCEL     25  // (mm/s^2) Lower acceleration may allow a faster feedrate.
-  #define FILAMENT_CHANGE_FAST_LOAD_LENGTH   415  // (mm) Load length of filament, from extruder gear to nozzle. *WOB* (0)
+  #define FILAMENT_CHANGE_FAST_LOAD_LENGTH   405  // (mm) Load length of filament, from extruder gear to nozzle. *WOB* (0)
                                                   //   For Bowden, the full length of the tube and nozzle.
                                                   //   For direct drive, the full length of the nozzle.
   //#define ADVANCED_PAUSE_CONTINUOUS_PURGE       // Purge continuously up to the purge length until interrupted.
