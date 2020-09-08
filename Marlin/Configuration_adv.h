@@ -3194,15 +3194,15 @@
   #define USER_DESC_3 "Preheat for " PREHEAT_2_LABEL
   #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
 
-  #define USER_DESC_4 "Head Repair Position" // *WOB*
-  #define USER_GCODE_4 "G90\nG0 X0 Y0 Z80\nM84" // *WOB*
+  #define USER_DESC_4 "Preheat for " PREHEAT_3_LABEL // *WOB*
+  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND) // *WOB*
+
+  #define USER_DESC_5 "Preheat for " PREHEAT_4_LABEL // *WOB*
+  #define USER_GCODE_5 "M140 S" STRINGIFY(PREHEAT_4_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_4_TEMP_HOTEND) // *WOB*
+
+  #define USER_DESC_6 "Head Repair Position" // *WOB*
+  #define USER_GCODE_6 "G90\nG0 X0 Y0 Z80\nM84" // *WOB*
   
-  #define USER_DESC_5 "Heat + Level " PREHEAT_1_LABEL // *WOB*
-  #define USER_GCODE_5 "M190 R" STRINGIFY(PREHEAT_1_TEMP_BED) "\nG4 S60\nG28\nG29\nM500\nG28\nM140 S0" // *WOB*
-
-  #define USER_DESC_6 "Heat + Level " PREHEAT_2_LABEL // *WOB*
-  #define USER_GCODE_6 "M190 R" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG4 S60\nG28\nG29\nM500\nG28\nM140 S0" // *WOB*
-
   #define USER_DESC_7 "Home & Info"
   #define USER_GCODE_7 "G28\nM503"
 #endif
