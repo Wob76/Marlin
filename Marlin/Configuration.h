@@ -104,13 +104,13 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 2
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 2
 
 /**
  * This setting determines the communication speed of the printer.
@@ -589,7 +589,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 500 // *WOB* (200)
+#define EXTRUDE_MAXLENGTH 600 // *WOB* (200)
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -1526,7 +1526,7 @@
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL         "PLA+"
-#define PREHEAT_2_TEMP_HOTEND   200 // *WOB*
+#define PREHEAT_2_TEMP_HOTEND   210 // *WOB*
 #define PREHEAT_2_TEMP_BED      75 // *WOB*
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
