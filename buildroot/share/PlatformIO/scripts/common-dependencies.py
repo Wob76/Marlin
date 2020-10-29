@@ -28,12 +28,6 @@ def parse_pkg_uri(spec):
 		return name
 
 def add_to_feat_cnf(feature, flines):
-
-	try:
-		feat = FEATURE_CONFIG[feature]
-	except:
-		FEATURE_CONFIG[feature] = {}
-
 	feat = FEATURE_CONFIG[feature]
 	atoms = re.sub(',\\s*', '\n', flines).strip().split('\n')
 	for dep in atoms:
@@ -188,8 +182,7 @@ def search_compiler():
 		for file in os.listdir(path):
 			if not file.endswith(gcc):
 				continue
-			# Use entire path to not rely on env PATH
-			filepath = os.path.sep.join([pathdir, filepath])
+
 			# Cache the g++ path to no search always
 			if os.path.exists(ENV_BUILD_PATH):
 				print('Caching g++ for current env')
@@ -226,7 +219,7 @@ def load_marlin_features():
 		else:
 			cmd += ['-D' + s]
 
-	cmd += ['-D__MARLIN_DEPS__ -w -dM -E -x c++ buildroot/share/PlatformIO/scripts/common-dependencies.h']
+	cmd += ['-w -dM -E -x c++ buildroot/share/PlatformIO/scripts/common-dependencies.h']
 	cmd = ' '.join(cmd)
 	print(cmd)
 	define_list = subprocess.check_output(cmd, shell=True).splitlines()
