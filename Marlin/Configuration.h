@@ -1402,7 +1402,6 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_XY (50*60)
 #define HOMING_FEEDRATE_XY (20*60) // *WOB (50*60)
 #define HOMING_FEEDRATE_Z  (4*60)
 
