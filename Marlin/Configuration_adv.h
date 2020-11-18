@@ -798,11 +798,11 @@
 //
 // Add the G35 command to read bed corners to help adjust screws. Requires a bed probe.
 //
-//#define ASSISTED_TRAMMING
+#define ASSISTED_TRAMMING // *WOB*
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probing points, use the hotend as reference not the sensor.
-  #define TRAMMING_POINT_XY { {  20, 20 }, { 200,  20 }, { 200, 200 }, { 20, 200 } }
+  #define TRAMMING_POINT_XY { {  44, 44 }, { 191,  44 }, { 191, 191 }, { 44, 191 } } // *WOB*
 
   // Define positions names for probing points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
@@ -823,7 +823,7 @@
    *   M4: 40 = Clockwise, 41 = Counter-Clockwise
    *   M5: 50 = Clockwise, 51 = Counter-Clockwise
    */
-  #define TRAMMING_SCREW_THREAD 30
+  #define TRAMMING_SCREW_THREAD 40 // *WOB*
 
 #endif
 
@@ -1904,18 +1904,18 @@
 // The number of linear moves that can be in the planner at once.
 // The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g. 8, 16, 32)
 #if BOTH(SDSUPPORT, DIRECT_STEPPING)
-  #define BLOCK_BUFFER_SIZE  32 // *WOB* (8)
+  #define BLOCK_BUFFER_SIZE 8
 #elif ENABLED(SDSUPPORT)
-  #define BLOCK_BUFFER_SIZE 32 // *WOB* (16)
+  #define BLOCK_BUFFER_SIZE 16
 #else
-  #define BLOCK_BUFFER_SIZE 32 // *WOB* (16)
+  #define BLOCK_BUFFER_SIZE 16
 #endif
 
 // @section serial
 
 // The ASCII buffer for serial input
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 32 // *WOB* (4)
+#define BUFSIZE 4
 
 // Transmission to Host Buffer Size
 // To save 386 bytes of PROGMEM (and TX_BUFFER_SIZE+3 bytes of RAM) set to 0.
@@ -1924,7 +1924,7 @@
 // For debug-echo: 128 bytes for the optimal speed.
 // Other output doesn't need to be that speedy.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256]
-#define TX_BUFFER_SIZE 32 // *WOB* (0)
+#define TX_BUFFER_SIZE 0
 
 // Host Receive Buffer Size
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
@@ -1959,7 +1959,7 @@
  * Currently handles M108, M112, M410, M876
  * NOTE: Not yet implemented for all platforms.
  */
-//#define EMERGENCY_PARSER
+#define EMERGENCY_PARSER // *WOB*
 
 // Bad Serial-connections can miss a received command by sending an 'ok'
 // Therefore some clients abort after 30 seconds in a timeout.
@@ -2539,7 +2539,7 @@
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
    * M122 - Report driver parameters (Requires TMC_DEBUG)
    */
-  //#define MONITOR_DRIVER_STATUS
+  #define MONITOR_DRIVER_STATUS
 
   #if ENABLED(MONITOR_DRIVER_STATUS)
     #define CURRENT_STEP_DOWN     50  // [mA]
