@@ -697,7 +697,7 @@
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
-#define ENDSTOP_INTERRUPTS_FEATURE // *WOB*
+//#define ENDSTOP_INTERRUPTS_FEATURE
 
 /**
  * Endstop Noise Threshold
@@ -748,11 +748,11 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 60 } // *WOB*
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 10, 25 } // *WOB*
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-#define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 20, 120 } // ...or, set your own edit limits *WOB*
+#define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 20, 60 } // ...or, set your own edit limits *WOB*
 #endif
 
 /**
@@ -995,7 +995,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 15 // *WOB* (10)
+#define PROBING_MARGIN 20 // *WOB* (10)
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED (133*60) // *WOB* (133*60)
