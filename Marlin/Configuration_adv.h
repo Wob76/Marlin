@@ -806,7 +806,6 @@
 //#define ASSISTED_TRAMMING
 #if ENABLED(ASSISTED_TRAMMING)
 
-  // Define positions for probe points.
   // Define positions for probing points, use the hotend as reference not the sensor.
   #define TRAMMING_POINT_XY { { 44, 44 }, { 191,  44 }, { 191, 191 }, { 44, 191 } } // *WOB* { 20, 20 }, { 180,  20 }, { 180, 180 }, { 20, 180 }
 
